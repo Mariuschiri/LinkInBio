@@ -1,0 +1,82 @@
+html {
+    background: black url("background.jpg") center center no-repeat; 
+    background-size: cover; 
+    color: white;
+}
+body {
+    display: block;
+    min-height: 100vh;
+    place-items: center;  /*Toate itemele sunt aliniate la mijloc*/ ;
+    font-family: Arial, Helvetica, sans-serif; /*Fontul paginii*/
+    font-size: 16px;  /*Marimea scrsului pe intreaga pagina*/
+    margin: 0;
+    line-height: 1.5em;  /*Distanta dintre doua linii*/  /*1em = valoarea din font-size curent(16px) => 1em = 16px (aici)*/
+}
+@media (min-width: 500px) {body {display: grid;}}
+.Container {
+    margin: 2vh;  /*1vh = 1% din inaltimea totala a ecranului => 2vh = 2%*/
+    background: rgba(79, 109, 245, 0.8);
+    padding: 1rem;        /*1rem = font-size din body => 1rem = 16px*/
+    border-radius: 2rem;
+    font-size: clamp(1rem, 2vw, 2rem); /*Latimea are minim 1rem si maxim 2rem*/
+    line-height: 1.5em;
+}
+    header {
+
+    }
+        .Avatar {
+            display: block;
+            float: left;
+            width: 112px;
+            height: auto;
+            margin: 0 1em 0 0;  /*margine sus, dreapta, jos stanga*/
+            border-radius: 50%;
+        }
+        .TitlulPaginii {
+            display: block;
+            font-size: clamp(1rem, 6vw, 2rem);
+            line-height: 1rem;
+            margin: 0;
+        }
+    main { }
+        .ListaLinkuri { 
+            display: block;
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid white;
+         }
+            .ListaItem {  
+                display: block;
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid white;
+            }
+                .ListaLink {
+                    display: block;
+                    padding: 0.5em;
+                    color: white;
+                    text-decoration: none;
+                 }
+                     .ListaTitlu { 
+                         display: block;
+                         font-size: 1em;
+                         line-height: 1.5em;
+                         margin: 0;
+                         padding: 0;
+                      }
+                     .ListaText { 
+                        display: block;
+                        font-size: 1em;
+                        line-height: 1.5em;
+                        margin: 0;
+                        padding: 0;
+                     } 
+
+    .ListaLink:hover {
+        background: white;
+        color: black;
+    }
+
+    @media (min-width: 880px) {
+        .ListaLinkuri {display: grid; grid-template-columns: 1fr 1fr;}
+    }
