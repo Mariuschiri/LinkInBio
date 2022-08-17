@@ -50,7 +50,25 @@
     <body>
         <div class="Container" itemscope itemtype="https://schema.org/Person">
             <header>
-                <img class="Avatar" src="marius.chiriac.jpg" width="300px" height="300px" itemprop="image" alt="Imagine de profil Marius Chiriac" />
+
+                <picture class="Avatar">
+                    <source type="image/webp" srcset="
+                        marius-chiriac-120.webp 120w,
+                        marius-chiriac-192.webp 192w
+                    " sizes=" 
+                        (max-width: 929px) 120px,
+                        (min-width: 930px) 192px
+                    " />
+                    <img srcset="
+                         marius-chiriac-120.jpg 120w,
+                         marius-chiriac-192.jpg 192w
+                    " sizes="
+                        (max-width: 929px) 120px,
+                        (min-width: 930px) 192px
+                    " src="@todo" alt="Imagine de profil Marius Chiriac" 
+                      loading="lazy" decoding="async" width="112" height="112" itemprop="image" />
+                </picture>
+
                 <h1 class="TitlulPaginii">
                     <strong itemprop="name">Marius Chiriac</strong>
                 </h1>
