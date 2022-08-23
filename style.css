@@ -122,3 +122,33 @@ body {
     @media (min-width:1120px) {
         .Avatar img {width: 120px; height: 120px;}
     }
+
+
+
+
+
+
+
+    @media print {
+        * {background-image: none; background: white; color: black;}
+
+        @page {margin:2cm}
+        @page :first {margin-top: 3cm;}
+        @page :left {margin-right: 3cm;}
+        @page :right {margin-left: 3cm;}
+
+        html {background: white; font-size: 12pt; line-height: 1.5em;}
+
+        a:link, a:visited {color: blue; background: transparent; font-weight: bold;}
+        body:after {content: "Copyright © Marius Chiriac, toate drepturile rezervate"; display: block; text-align: center;}
+
+        .Container {background: transparent; margin: 0; padding: 0;}
+
+        h1, h2, h3, h4, h5, h6 {page-break-after: avoid; page-break-inside: avoid;}
+        h1 + h2 {page-break-before: avoid;}
+        table, pre, img, svg, blockquote, a {break-inside: avoid;}
+        ul, ol, dl {page-break-before: avoid;}
+        .TitlulPaginii { padding-top: 0.5em; }
+        .ListaText { display: inline; color: #00f; white-space: normal; text-decoration: underline; }
+
+    }
